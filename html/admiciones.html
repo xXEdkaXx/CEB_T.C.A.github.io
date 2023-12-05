@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admi.css" />
+    <link rel="stylesheet" href="../css/plantilla.css" />
+    <script type="text/javascript" src="../js/nav.js"></script>
+    <script src="../js/validacion.js"></script>
+    <title>CEB T.C.A - Admiciones</title>
+    <link rel="icon" href="../CentroBasico/imagenes/Logo.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="./home.html"><img src="../CentroBasico/imagenes/Logo.png" alt="Logo" /></a>
+        </div>
+        <nav>
+            <ul class="nav-link">
+                <li>
+                    <a href="./acercade.html">Acerca de</a>
+                    <ul class="submenu">
+                        <li><a href="./quienessomos.html">¿Quiénes Somos?</a></li>
+                        <li><a href="./valores.html">Valores</a></li>
+                        <li> <a href="./quienessomos.html">Galeria</a></li>
+                    </ul>
+                </li>
+                <li><a href="./propuestas.html">Propuestas</a></li>
+                <li><a href="./biblioteca.html">Biblioteca</a></li>
+                <li><a href="./noticias.html">Noticias</a></li>
+                <li><a href="./admisiones.html">Admisiones</a></li>
+            </ul>
+        </nav>
+        <a href="./contacto.html" class="btn"><button>Contacto</button></a>
+
+        <a href="#" onclick="openNav()" class="menu"><button>Menu</button></a>
+
+        <div class="overlay" id="mobile-menu">
+            <a href="#" onclick="closeNav()" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="./acercade.html">Acerca de</a>
+                <a href="./quienessomos.html">¿Quiénes Somos?</a>
+                <a href="./valores.html">Valores</a>
+                <a href="./quienessomos.html">Galeria</a>
+                <a href="./propuestas.html">Propuestas</a>
+                <a href="./biblioteca.html">Biblioteca</a>
+                <a href="noticias.html">Noticias</a>
+                <a href="./admisiones.html">Admisiones</a>
+                <a href="./contacto.html">Contacto</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="contenedor">
+            <h1>Admisión</h1>
+            <form action="admiciones.html" method="get" id="admiciones" novalidate>
+                <h2>Datos Personales</h2>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required><br><br>
+
+                <label for="identidad">Número de Identidad:</label>
+                <input type="text" id="identidad" name="identidad"><br><br>
+
+                <label for="padre">Nombre del Padre:</label>
+                <input type="text" id="padre" name="padre"><br><br>
+
+                <label for="madre">Nombre de la madre:</label>
+                <input type="text" id="madre" name="madre"><br><br>
+
+                <label>Género:</label><br>
+                <input type="radio" id="masculino" name="genero" value="masculino">
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="femenino" name="genero" value="femenino">
+                <label for="femenino">Femenino</label>
+                <br><br>
+
+                <label for="escuela">Escuela o centros bacicos:</label>
+                <select id="escuela" name="escuela">
+                    <option value="virtual">selecione la escuela</option>
+                    <option value="virtual">Ceb José Cecilio del valle</option>
+                    <option value="virtual">Jhon f Kennedy</option>
+                    <option value="virtual">Gold medal school</option>
+                    <option value="virtual">otras esculeas</option>
+                </select>
+                <br><br>
+
+                <label for="direccion">Dirección de Casa:</label>
+                <input type="text" id="direccion" name="direccion" required><br><br>
+
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="nacimiento" name="nacimiento" required><br><br>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="telefono">Teléfono de Contacto:</label>
+                <input type="tel" id="telefono" name="telefono" required><br><br>
+
+                <label for="grado">Grado:</label>
+                <input type="text" id="grado" name="grado" required><br><br>
+
+                <label for="motivo">Motivo de la Admisión:</label>
+                <textarea id="motivo" name="motivo" rows="4" required></textarea><br><br>
+
+                <input type="submit" value="Enviar Solicitud">
+
+            </form>
+        </div>
+    </main>
+    <footer>
+        <section>
+            <p>CEB TIBURCIO CARIAS ANDINO, Jesús de Otoro <br></p>
+            <p>Tel. 7568-3698 <br></p>
+            <p>Whatsapp +50495-9668 <br></p>
+            <p>cebtiburciocarias85andino@gmail.com <br></p>
+            <span>&copy; Todos los Derechos Reservados 2023 PW</span>
+        </section>
+    </footer>
+</body>
+
+</html>

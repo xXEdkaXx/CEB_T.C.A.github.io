@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admi.css" />
+    <link rel="stylesheet" href="../css/plantilla.css" />
+    <script type="text/javascript" src="../js/nav.js"></script>
+    <title>CEB T.C.A - Admisiones</title>
+    <link rel="icon" href="../CentroBasico/imagenes/Logo.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="./home.html"><img src="../CentroBasico/imagenes/Logo.png" alt="Logo" /></a>
+        </div>
+        <nav>
+            <ul class="nav-link">
+                <li>
+                    <a href="./acercade.html">Acerca de</a>
+                    <ul class="submenu">
+                        <li><a href="./quienessomos.html">¿Quiénes Somos?</a></li>
+                        <li><a href="./valores.html">Valores</a></li>
+                        <li> <a href="./quienessomos.html">Galeria</a></li>
+                    </ul>
+                </li>
+                <li><a href="./propuestas.html">Propuestas</a></li>
+                <li><a href="./biblioteca.html">Biblioteca</a></li>
+                <li><a href="./noticias.html">Noticias</a></li>
+                <li><a href="./admisiones.html">Admisiones</a></li>
+            </ul>
+        </nav>
+        <a href="./contacto.html" class="btn"><button>Contacto</button></a>
+
+        <a href="#" onclick="openNav()" class="menu"><button>Menu</button></a>
+
+        <div class="overlay" id="mobile-menu">
+            <a href="#" onclick="closeNav()" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="./acercade.html">Acerca de</a>
+                <a href="./quienessomos.html">¿Quiénes Somos?</a>
+                <a href="./valores.html">Valores</a>
+                <a href="./quienessomos.html">Galeria</a>
+                <a href="./propuestas.html">Propuestas</a>
+                <a href="./biblioteca.html">Biblioteca</a>
+                <a href="noticias.html">Noticias</a>
+                <a href="./admisiones.html">Admisiones</a>
+                <a href="./contacto.html">Contacto</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="contenedor">
+            <form>
+                <h2 class="title">Información Personal</h2>
+                <p></p>
+                <div class="presencial">
+                    <h3>Matrícula Presencial</h3>
+                    <label for="nombrePresencial">Nombre del pardre o madre o encargado:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="apellidosPresencial">Apellidos del pardre o madre o encargado:</label>
+                    <input type="text" id="apellidos" name="apellidos" required>
+
+                    <label for="Nombre Del Alumno(a)">Nombre Del Alumno(a):</label>
+                    <input type="text" id="Nombre Del Alumno(a)" name="Nombre Del Alumno(a)" required>
+
+                    <label for="Apellidos del Alumno(a)">Apellidos del Alumno(a):</label>
+                    <input type="text" id="Apellidos del Alumno(a)" name="apellidosPresencial" required>
+
+                    <label for="escuela donde estuvo">Escuela o centros bacicos:</label>
+                    <select id="modalidad" name="modalidad">
+                        <option value="virtual">selecione la escuela</option>
+                        <option value="virtual">Ceb José Cecilio del valle</option>
+                        <option value="virtual">Jhon f Kennedy</option>
+                        <option value="virtual">Gold medal school</option>
+                        <option value="virtual">otras esculeas</option>
+                    </select>
+                    <div class="contenedor">
+                        <script>
+                            // Función para actualizar los días según el mes seleccionado
+                            function actualizarDias() {
+                                const mesSeleccionado = document.getElementById("mes").value;
+                                const diaSelect = document.getElementById("dia");
+
+                                // Eliminar todas las opciones de días
+                                diaSelect.innerHTML = "";
+
+                                // Calcular el número de días según el mes
+                                let numeroDias = 31; // Por defecto, se establece en 31
+                                if (mesSeleccionado === "04" || mesSeleccionado === "06" || mesSeleccionado === "09" || mesSeleccionado === "11") {
+                                    numeroDias = 30; // Meses con 30 días
+                                } else if (mesSeleccionado === "02") {
+                                    // Comprobar si el año es bisiesto o no
+                                    const anioSeleccionado = parseInt(document.getElementById("anio").value);
+                                    numeroDias = (anioSeleccionado % 4 === 0 && (anioSeleccionado % 100 !== 0 || anioSeleccionado % 400 === 0)) ? 29 : 28;
+                                }
+
+                                // Agregar las opciones de días
+                                for (let i = 1; i <= numeroDias; i++) {
+                                    diaSelect.innerHTML += `<option value="${i}">${i}</option>`;
+                                }
+                            }            
+                        </script>
+                        </head>
+
+                        <body>
+                            <form>
+                                <h2>Selecciona una Fecha</h2>
+                                <div>
+                                    <label for="anio">Año:</label>
+                                    <select id="anio" name="anio">
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <!-- Agrega más opciones de años según sea necesario -->
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="mes">Mes:</label>
+                                    <select id="mes" name="mes" onchange="actualizarDias()">
+                                        <option value="01">Enero</option>
+                                        <option value="02">Febrero</option>
+                                        <option value="03">Marzo</option>
+                                        <option value="04">Abril</option>
+                                        <option value="05">Mayo</option>
+                                        <option value="06">Junio</option>
+                                        <option value="07">Julio</option>
+                                        <option value="08">Agosto</option>
+                                        <option value="09">Septiembre</option>
+                                        <option value="10">Octubre</option>
+                                        <option value="11">Noviembre</option>
+                                        <option value="12">Diciembre</option>
+                                        <!-- Agrega más opciones de meses -->
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="dia">Día:</label>
+                                    <select id="dia" name="dia">
+                                        <!-- Las opciones de días se actualizarán dinámicamente aquí -->
+                                    </select>
+                                </div>
+                                <button type="submit">Seleccionar Fecha</button>
+                            </form>
+                    </div>
+
+                    <label for="email">Correo Electrónico del encargado:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <h2>Modalidad de Matrícula</h2>
+                    <select id="modalidad" name="modalidad">
+                        <option value="virtual">Virtual</option>
+                    </select>
+
+                    <button type="submit">Enviar Matrícula</button>
+
+            </form>
+        </div>
+    </main>
+    <footer>
+        <section>
+            <p>CEB TIBURCIO CARIAS ANDINO, Jesús de Otoro <br></p>
+            <p>Tel. 7568-3698 <br></p>
+            <p>Whatsapp +50495-9668 <br></p>
+            <p>cebtiburciocarias85andino@gmail.com <br></p>
+            <span>&copy; Todos los Derechos Reservados 2023 PW</span>
+        </section>
+    </footer>
+</body>
+
+</html>

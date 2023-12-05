@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CEB Tiburcio Carias Andino</title>
+    <link rel="icon" href="../CentroBasico/imagenes/Logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/plantilla.css" />
+    <link rel="stylesheet" href="../css/slider_panel.css" />
+    <link rel="stylesheet" href="../css/cards.css" />
+    <script type="text/javascript" src="../js/nav.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="./home.html"><img src="../CentroBasico/imagenes/Logo.png" alt="Logo" /></a>
+        </div>
+        <nav>
+            <ul class="nav-link">
+                <li>
+                    <a href="./acercade.html">Acerca de</a>
+                    <ul class="submenu">
+                        <li><a href="./quienessomos.html">¿Quiénes Somos?</a></li>
+                        <li><a href="./valores.html">Valores</a></li>
+                        <li> <a href="./galería.html">Galería</a></li>
+                    </ul>
+                </li>
+                <li><a href="./propuestas.html">Propuestas</a></li>
+                <li><a href="./biblioteca.html">Biblioteca</a></li>
+                <li><a href="./noticias.html">Noticias</a></li>
+                <li><a href="./admisiones.html">Admisiones</a></li>
+            </ul>
+        </nav>
+        <a href="./contacto.html" class="btn"><button>Contacto</button></a>
+
+        <a href="#" onclick="openNav()" class="menu"><button>Menu</button></a>
+
+        <div class="overlay" id="mobile-menu">
+            <a href="#" onclick="closeNav()" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="./acercade.html">Acerca de</a>
+                <a href="./quienessomos.html">¿Quiénes Somos?</a>
+                <a href="./valores.html">Valores</a>
+                <a href="./galería.html">Galería</a>
+                <a href="./propuestas.html">Propuestas</a>
+                <a href="./biblioteca.html">Biblioteca</a>
+                <a href="noticias.html">Noticias</a>
+                <a href="./admisiones.html">Admisiones</a>
+                <a href="./contacto.html">Contacto</a>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <section class="contenedor">
+            <div style="justify-content: center; background-color: #9AD0C2;" class="box_conteiner">
+                <h1 class="titulos">Bienvenido a Nuestra Escuela</h2>
+            </div>
+            <div style="background-color: #9AD0C2;" class="box_conteiner">
+                <div class="colum-box">
+                    <h2 class="titulo">Mision</h2>
+                    <p class="parrafo">
+                        El Centro de Educación Básica "Tiburcio Carias Andino" es una
+                        institución educativa comprometida con la transformación educativa
+                        de los niños y niñas del municipio. Nuestra misión es proporcionar
+                        una educación básica de alta calidad con sensibilidad hacia los
+                        niños con necesidades especiales, creando un ambiente de respeto y
+                        compañerismo.
+                    </p>
+                </div>
+
+                <div class="colum-box">
+                    <h2 class="titulo">Vision</h2>
+                    <p class="parrafo">
+                        Para el año 2023, el Centro de Educación Básica "Tiburcio Carias
+                        Andino" se convertirá en una institución con una infraestructura
+                        física que satisface las necesidades básicas de la población
+                        escolar. Nuestros alumnos se graduarán con sólidos valores morales
+                        y espirituales, preparados para enfrentar los desafíos y
+                        oportunidades que ofrece la sociedad, con el objetivo de mejorar
+                        su calidad de vida. Contaremos con un personal altamente
+                        capacitado, dinámico, creativo y comprometido.
+                    </p>
+                </div>
+            </div>
+            <br>
+            <div class="slider-container">
+                <div class="container-carousel">
+                    <div class="carousel" id="slider">
+                        <section class="slider-section">
+                            <img src="../CentroBasico/imagenes/Diseño sin título.png" alt="Referencia 1" />
+                        </section>
+                        <section class="slider-section">
+                            <img src="../CentroBasico/imagenes/nosotros_07.webp" alt="Referencia 2" />
+                        </section>
+                        <section class="slider-section">
+                            <img src="../CentroBasico/imagenes/actividades_07.webp" alt="Referencia 3" />
+                        </section>
+                        <section class="slider-section">
+                            <img src="../CentroBasico/imagenes/desfile_05.webp" alt="Referencia 4" />
+                        </section>
+                        <section class="slider-section">
+                            <img src="../CentroBasico/imagenes/cuadro_danza_04.webp" alt="Referencia 5" />
+                        </section>
+                        <section class="slider-section">
+                            <img src="../CentroBasico/imagenes/nosotros_05.webp" alt="Referencia 6" />
+                        </section>
+                    </div>
+                    <div class="btn-left">&lt;</div>
+                    <div class="btn-right">></div>
+                </div>
+            </div>
+            <script src="../js/carrusel.js"></script>
+            <h2 class="titulo">Noticias</h2>
+            <section class="card-container">
+                <section class="card">
+                    <div class="card-image">
+                        <img alt="Imágen de Tarjeta" src="../CentroBasico/imagenes/usaid.jpg" />
+                    </div>
+                    <h2 class="title">Cabildo Abierto</h2>
+                    <p class="parrafo">
+                        CEB Tiburcio Carías Andino participa activamente en el Cabildo Abierto 2023 de la Mujer,
+                        Niñez y
+                        Juventud, expresando
+                        sus opiniones sobre temas clave para estos sectores y fortaleciendo la colaboración con las
+                        autoridades gubernamentales.<br><br>Fecha: 6 de noviembre de 2023
+                    </p>
+                </section>
+
+                <section class="card">
+                    <div class="card-image">
+                        <img alt="Imágen de Tarjeta" src="../CentroBasico/imagenes/cuadro_danza_03.jpg" />
+                    </div>
+                    <h2 class="title">Festival de Danza</h2>
+                    <p class="parrafo">
+                        Felicidades al CEB Tiburcio Carías Andino por obtener el primer lugar en danzas, segundo
+                        ciclo,
+                        y el tercer lugar en
+                        tercer ciclo en el concurso patrocinado por el grupo folklórico Quelala. Reconocemos al
+                        Prof.
+                        Rómulo Antonio Perdomo
+                        como Mejor Instructor del segundo ciclo y a la Mejor Bailarina en básica, segundo ciclo.
+                        ¡Excelente desempeño y logros
+                        destacados!<br><br>Fecha: 6 de noviembre de 2023
+                    </p>
+                </section>
+
+                <section class="card">
+                    <div class="card-image">
+                        <img alt="Imágen de Tarjeta" src="../CentroBasico/imagenes/desfile_09.jpg" />
+                    </div>
+                    <h2 class="title">Desfile de la independencia</h2>
+                    <p class="parrafo">
+                        El CEB Tiburcio Carías Andino se destacó en el desfile del 14 de septiembre, celebrando con
+                        fervor patrio nuestra independencia. Felicitamos a maestros, padres y alumnos de nuestra
+                        prestigiosa institución por su empeño y dedicación, contribuyendo al éxito de este
+                        importante evento cívico.<br><br>Fecha: 15 de septiembre del 2023.
+                    </p>
+                </section>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <p>CEB TIBURCIO CARIAS ANDINO, Jesús de Otoro <br></p>
+            <p>Tel. 7568-3698 <br></p>
+            <p>Whatsapp +50495-9668 <br></p>
+            <p>cebtiburciocarias85andino@gmail.com <br></p>
+            <span>&copy; Todos los Derechos Reservados 2023 PW</span>
+        </section>
+    </footer>
+</body>
+
+</html>
